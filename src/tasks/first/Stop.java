@@ -5,7 +5,7 @@ public class Stop {
 
 	private String lng;
 
-	private String property;
+	private Object property;
 
 	private String datetime;
 
@@ -27,11 +27,11 @@ public class Stop {
 		this.lng = lng;
 	}
 
-	public String getProperty() {
+	public Object getProperty() {
 		return property;
 	}
 
-	public void setProperty(String property) {
+	public void setProperty(Object property) {
 		this.property = property;
 	}
 
@@ -55,5 +55,36 @@ public class Stop {
 	public String toString() {
 		return "ClassPojo [name = " + name + ", lng = " + lng + ", property = " + property + ", datetime = " + datetime
 				+ ", lat = " + lat + "]";
+	}
+
+	public String getKey() {
+		return lat + "_" + lng + "_" + name;
+	}
+
+	public void pPrint() {
+		cleanData();
+		String sString = "StopRow\u0001" + Route.stopId + '\u0001' + name + '\u0001' + lng + '\u0001' + lat + '\u0001'
+				+ property + '\u0001' + datetime;
+		System.out.println(sString);
+
+	}
+
+	private void cleanData() {
+		if (name == null) {
+			name = "";
+		}
+		if (lng == null) {
+			lng = "";
+		}
+		if (lat == null) {
+			lat = "";
+		}
+		if (property == null) {
+			property = "";
+		}
+		if (datetime == null) {
+			datetime = "";
+		}
+
 	}
 }

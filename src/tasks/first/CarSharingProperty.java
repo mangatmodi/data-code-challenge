@@ -25,7 +25,7 @@ public class CarSharingProperty extends Property {
 	private Integer seats;
 
 	private String internal_cleanliness;
-
+	
 	public Integer getDoors() {
 		return doors;
 	}
@@ -100,9 +100,40 @@ public class CarSharingProperty extends Property {
 
 	@Override
 	public String toString() {
-		return "ClassPojo [doors = " + doors + ", license_plate = " + license_plate + ", model = " + model
-				+ ", address = " + address + ", description = " + description + ", fuel_level = " + fuel_level
-				+ ", engine_type = " + engine_type + ", seats = " + seats + ", internal_cleanliness = "
-				+ internal_cleanliness + "]";
+		return (doors == null ? "" : doors).toString() + '\u0001' + license_plate + '\u0001' + model + '\u0001' + address
+				+ '\u0001' + description + '\u0001' + fuel_level + '\u0001' + engine_type + '\u0001'
+				+ (seats == null ? "" : seats) + '\u0001' + internal_cleanliness;
+	}
+
+	@Override
+	public void cleanData() {
+		if (license_plate == null) {
+			license_plate = "";
+		}
+		if (model == null) {
+			model = "";
+		}
+		if (address == null) {
+			address = "";
+		}
+		if (description == null) {
+			description = "";
+		}
+		if (fuel_level == null) {
+			fuel_level = "";
+		}
+		if (engine_type == null) {
+			engine_type = "";
+		}
+		if (internal_cleanliness == null) {
+			internal_cleanliness = "";
+		}
+
+	}
+
+	@Override
+	public
+	void pPrint(int routeId) {
+		System.out.println("CarSharingProperty\u0001" + routeId + '\u0001' + this);
 	}
 }

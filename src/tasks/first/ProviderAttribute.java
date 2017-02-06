@@ -67,10 +67,29 @@ public class ProviderAttribute {
 		return ParseRouteFile.gson.fromJson(jsonString, ProviderAttribute.class);
 	}
 
+	public void cleanData() {
+		if (display_name == null) {
+			display_name = "";
+		}
+		if (provider_icon_url == null) {
+			provider_icon_url = "";
+		}
+		if (disclaimer == null) {
+			disclaimer = "";
+		}
+		if (ios_app_url == null) {
+			ios_app_url = "";
+		}
+		if (ios_itunes_url == null) {
+			ios_itunes_url = "";
+		}
+		if (android_package_name == null) {
+			android_package_name = "";
+		}
+	}
 	@Override
 	public String toString() {
-		return "ClassPojo [display_name = " + display_name + ", provider_icon_url = " + provider_icon_url
-				+ ", disclaimer = " + disclaimer + ", ios_app_url = " + ios_app_url + ", ios_itunes_url = "
-				+ ios_itunes_url + ", android_package_name = " + android_package_name + "]";
+		return display_name + '\u0001' + provider_icon_url + '\u0001' + disclaimer + '\u0001' + ios_app_url + '\u0001'
+				+ ios_itunes_url + '\u0001' + android_package_name;
 	}
 }

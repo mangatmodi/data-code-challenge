@@ -1,6 +1,9 @@
 package tasks.first;
 
+import tasks.first.TaxiProperty.Companies;
+
 public class TaxiProperty extends Property {
+	private int companyId;
 	private Companies[] companies;
 
 	public Companies[] getCompanies() {
@@ -39,7 +42,34 @@ public class TaxiProperty extends Property {
 
 		@Override
 		public String toString() {
-			return "ClassPojo [phone = " + phone + ", name = " + name + "]";
+			return phone + '\u0001' + name;
 		}
+
+		public void cleanData() {
+			if (phone == null) {
+				phone = "";
+			}
+			if (name == null) {
+				name = "";
+			}
+		}
+	}
+
+	@Override
+	public void cleanData() {
+		for (Companies c : companies) {
+			c.cleanData();
+		}
+
+	}
+
+	@Override
+	public void pPrint(int routeId) {
+		for (Companies c : companies) {
+			companyId++;
+			System.out.println("TaxiRoute\u0001" + companyId + "" + '\u0001' + routeId);
+			System.out.println("TaxiProperty\u0001" + companyId + "" + '\u0001' + c);
+		}
+
 	}
 }

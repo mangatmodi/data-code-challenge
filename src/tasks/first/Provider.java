@@ -1,29 +1,30 @@
 package tasks.first;
 
 public class Provider {
-	public static enum PROVIDER_NAME {
-		VBB, DRIVENOW, CAR2GO, GOOGLE, NEXTBIKE, CALLABIKE, UNKOWN;
-	}
-
+	private static int prevProvider = 0;
 	private String type;
-	private PROVIDER_NAME typeEnum;
 	private ProviderAttribute attributes;
 
 	Provider(String name) {
 		this.type = name;
 	}
 
+	public void cleanData() {
+		if (type == null) {
+			type = "";
+		}
+		attributes.cleanData();
+	}
+
+	public void pPrint() {
+		prevProvider++;
+		cleanData();
+		System.out.println("ProviderRoute\u0001" + prevProvider + '\u0001' + type + '\u0001' + attributes);
+	}
+
 	@Override
 	public String toString() {
-		return "Provider [type=" + type + ", typeEnum=" + typeEnum + ", attributes=" + attributes + "]";
-	}
-
-	public PROVIDER_NAME getTypeEnum() {
-		return typeEnum;
-	}
-
-	public void setTypeEnum(PROVIDER_NAME typeEnum) {
-		this.typeEnum = typeEnum;
+		return "ProviderRoute type=" + type + ", , attributes=" + attributes + "]";
 	}
 
 	public ProviderAttribute getAttributes() {
@@ -32,14 +33,6 @@ public class Provider {
 
 	public void setAttributes(ProviderAttribute attributes) {
 		this.attributes = attributes;
-	}
-
-	public void setType() {
-		try {
-			this.typeEnum = PROVIDER_NAME.valueOf(type.toUpperCase());
-		} catch (Exception e) {
-			this.typeEnum = PROVIDER_NAME.UNKOWN;
-		}
 	}
 
 }

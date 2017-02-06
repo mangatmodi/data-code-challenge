@@ -1,14 +1,18 @@
 package main;
 
+import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.io.Reader;
 
 import tasks.first.PropertyDeserializer;
 import tasks.first.Provider;
 import tasks.first.ProviderDesiralizer;
 import tasks.first.Route;
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -23,6 +27,12 @@ public class ParseRouteFile {
 			.registerTypeAdapter(tasks.first.Provider.class, new ProviderDesiralizer()).create();
 
 	public static void main(String[] args) {
+		try {
+			System.setOut(new PrintStream(new BufferedOutputStream(new FileOutputStream(args[1])), true));
+		} catch (Exception e) {
+			logger.log(Level.WARNING, "Unable to use file as stdout:" + args[1], false);
+			e.printStackTrace();
+		}
 		Reader in = null;
 		try {
 			in = new BufferedReader(new FileReader(args[0]));
@@ -42,13 +52,13 @@ public class ParseRouteFile {
 						Route r = gson.fromJson(reader, Route.class);
 						r.setType();
 						r.setProperties();
-						System.out.println(r);
+						r.pPrint();
 					}
 					reader.endArray();
 				} else if (key.equals("provider_attributes")) {
 					Provider[] p = gson.fromJson(reader, Provider.class);
-					for(Provider p1:p){
-						System.out.println(p1);
+					for (Provider p1 : p) {
+						p1.pPrint();
 					}
 				} else {
 					reader.skipValue();
@@ -61,5 +71,6 @@ public class ParseRouteFile {
 			logger.log(Level.SEVERE, "Malformed Json routes file:" + args[0], false);
 			System.exit(-1);
 		}
+
 	}
 }

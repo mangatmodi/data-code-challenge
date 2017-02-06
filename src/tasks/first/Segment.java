@@ -81,10 +81,60 @@ public class Segment {
 		this.travel_mode = travel_mode;
 	}
 
+	public void cleanData() {
+		if (num_stops == null) {
+			num_stops = "";
+		}
+		if (color == null) {
+			color = "";
+		}
+		if (description == null) {
+			description = "";
+		}
+		if (name == null) {
+			name = "";
+		}
+		if (icon_url == null) {
+			icon_url = "";
+		}
+		if (travel_mode == null) {
+			travel_mode = "";
+		}
+		if (polyline == null) {
+			polyline = "";
+		}
+	}
+
 	@Override
 	public String toString() {
 		return "ClassPojo [stops = " + stops + ", num_stops = " + num_stops + ", polyline = " + polyline + ", color = "
 				+ color + ", description = " + description + ", name = " + name + ", icon_url = " + icon_url
 				+ ", travel_mode = " + travel_mode + "]";
+	}
+
+	public void pPrint() {
+		cleanData();
+		System.out.println(
+				"SegmentRow\u0001" + Route.segmentId + '\u0001' + num_stops + '\u0001' + polyline + '\u0001' + color
+						+ '\u0001' + description + '\u0001' + name + '\u0001' + icon_url + '\u0001' + travel_mode);
+		int order = 0;
+		for (Stop s : stops) {
+			int stopId = 0;
+			if (Route.stopToId.containsKey(s.getKey())) {
+				stopId = Route.stopToId.get(s.getKey());
+			} else {
+				s.pPrint();
+				Route.stopId++;
+				Route.stopToId.put(s.getKey(), Route.stopId);
+				stopId = Route.stopId;
+			}
+			order++;
+			System.out.println("SegmentStopRow\u0001"+Route.segmentId + '\u0001' + stopId+'\u0001'+order);
+		}
+
+	}
+
+	public String getKey() {
+		return polyline;
 	}
 }
