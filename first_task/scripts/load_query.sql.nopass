@@ -1,0 +1,2 @@
+copy user_search_queries(user_id,query_time,search_time,search_mode,search_origin_lat,search_origin_lng,search_destination_lat,search_destination_long,source) from 's3://mangat-test-data-queries/queries_{today_date}.csv' 
+credentials 'aws_access_key_id={accessid};aws_secret_access_key={secretkey}' delimiter '\001' ;

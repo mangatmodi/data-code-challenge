@@ -1,0 +1,38 @@
+copy car_sharing_route(route_id,doors,license_plate,model,address,description,fuel_level,engine_type,seats,internal_cleanliness) from 's3://mangat-test-data/CarSharingRoute_{today_date}.csv' 
+credentials 'aws_access_key_id={accessid};aws_secret_access_key={secretkey}' delimiter '\001' ;
+
+copy stop(id,name,lat,lng,property,date_time) from 's3://mangat-test-data/Stop_{today_date}.csv' 
+credentials 'aws_access_key_id={accessid};aws_secret_access_key={secretkey}' 
+delimiter '\001' ;
+
+copy route(id,amount,currency,type,provider) from 's3://mangat-test-data/Route_{today_date}.csv' 
+credentials 'aws_access_key_id={accessid};aws_secret_access_key={secretkey}' 
+delimiter '\001' ;
+
+
+copy segment(id,num_stops,polyline,color,description,name,icon_url,travel_mode) from 's3://mangat-test-data/Segment_{today_date}.csv' 
+credentials 'aws_access_key_id={accessid};aws_secret_access_key={secretkey}' 
+delimiter '\001' ;
+
+copy taxi_company(id,phone,name) from 's3://mangat-test-data/TaxiCompany_{today_date}.csv' 
+credentials 'aws_access_key_id={accessid};aws_secret_access_key={secretkey}' 
+delimiter '\001' ;
+
+copy route_segment(route_id,segment_id,sequence) from 's3://mangat-test-data/RouteSegment_{today_date}.csv' 
+credentials 'aws_access_key_id={accessid};aws_secret_access_key={secretkey}' 
+delimiter '\001' ;
+
+copy segment_stop(segment_id,stop_id,sequence) from 's3://mangat-test-data/SegmentStop_{today_date}.csv' 
+credentials 'aws_access_key_id={accessid};aws_secret_access_key={secretkey}' 
+delimiter '\001' ;
+
+copy bike_sharing_route(route_id,id,available_bikes) from 's3://mangat-test-data/BikeSharingRoute_{today_date}.csv' 
+credentials 'aws_access_key_id={accessid};aws_secret_access_key={secretkey}' 
+delimiter '\001' ;
+
+copy taxi_route_company(company_id,route_id) from 's3://mangat-test-data/TaxiRoute_{today_date}.csv' 
+credentials 'aws_access_key_id={accessid};aws_secret_access_key={secretkey}' 
+delimiter '\001' ;
+
+
+

@@ -1,6 +1,8 @@
-/target/
+first_task/target/
 .DS_Store
 .classpath
 .project
 .settings
-load_data.sql
+first_task/scripts/*.sql
+first_task/scripts/*.sql-e
+!first_task/scripts/RedshiftCreateSchemas.sql
