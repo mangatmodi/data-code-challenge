@@ -64,7 +64,7 @@ public class Stop {
 	public void pPrint() {
 		cleanData();
 		String sString = "StopRow\u0001" + Route.stopId + '\u0001' + name + '\u0001' + lng + '\u0001' + lat + '\u0001'
-				+ property + '\u0001' + datetime;
+				+ property + '\u0001' + datetime.replace('T', ' ');
 		System.out.println(sString);
 
 	}

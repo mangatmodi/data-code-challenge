@@ -1,6 +1,6 @@
 package tasks.first;
 
-import main.ParseRouteFile;
+import tasks.first.main.ParseRouteFile;
 
 public class ProviderAttribute {
 	private String display_name;

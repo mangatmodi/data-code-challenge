@@ -1,11 +1,6 @@
-package tasks.first;
-
-import tasks.first.Property;
-
+package tasks.first.properties;
 public class CarSharingProperty extends Property {
-
 	CarSharingProperty(String propertyStrings) {
-
 	}
 
 	private Integer doors;
@@ -101,7 +96,7 @@ public class CarSharingProperty extends Property {
 	@Override
 	public String toString() {
 		return (doors == null ? "" : doors).toString() + '\u0001' + license_plate + '\u0001' + model + '\u0001' + address
-				+ '\u0001' + description + '\u0001' + fuel_level + '\u0001' + engine_type + '\u0001'
+ + '\u0001' + description + '\u0001' + fuel_level + '\u0001' + engine_type + '\u0001'
 				+ (seats == null ? "" : seats) + '\u0001' + internal_cleanliness;
 	}
 

@@ -3,6 +3,9 @@ package tasks.first;
 import java.util.HashMap;
 import java.util.Map;
 
+import tasks.first.properties.*;
+import tasks.first.properties.Property;
+
 public class Route {
 
 	static int routeId = 0;
@@ -97,28 +100,35 @@ public class Route {
 			price.setAmount("");
 			price.setCurrency("");
 		}
+		if (type == null) {
+			type = "";
+		}
+		if (provider == null) {
+			type = "";
+		}
 	}
 
 	public void pPrint() {
 		routeId++;
 		cleanData();
-		System.out.println(
-				"RouteRow\u0001" + routeId + '\u0001' + price + '\u0001' + '\u0001' + provider + '\u0001' + typeEnum);
+		System.out.println("RouteRow\u0001" + routeId + '\u0001' + price + '\u0001' + type + '\u0001' + provider);
 		int order = 0;
-		for (Segment s : segments) {
-			int segId = 0;
-			if (segmentToId.containsKey(s.getKey())) {
-				segId = segmentToId.get(s.getKey());
-			} else {
-				s.pPrint();
-				Route.segmentId++;
-				if (s.getKey() != null || s.getKey() == "") {
-					segmentToId.put(s.getKey(), Route.segmentId);
+		if (segments != null) {
+			for (Segment s : segments) {
+				int segId = 0;
+				if (segmentToId.containsKey(s.getKey())) {
+					segId = segmentToId.get(s.getKey());
+				} else {
+					s.pPrint();
+					Route.segmentId++;
+					if (s.getKey() != null || s.getKey() == "") {
+						segmentToId.put(s.getKey(), Route.segmentId);
+					}
+					segId = Route.segmentId;
 				}
-				segId = Route.segmentId;
+				order++;
+				System.out.println("RouteSegmentRow\u0001" + routeId + '\u0001' + segId + '\u0001' + order);
 			}
-			order++;
-			System.out.println("RouteSegmentRow\u0001" + routeId + '\u0001' + segId + '\u0001' + order);
 		}
 		if (propertyObject != null) {
 			propertyObject.cleanData();

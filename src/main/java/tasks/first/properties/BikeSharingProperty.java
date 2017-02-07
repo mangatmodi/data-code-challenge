@@ -1,4 +1,4 @@
-package tasks.first;
+package tasks.first.properties;
 
 public class BikeSharingProperty extends Property {
 	String id;

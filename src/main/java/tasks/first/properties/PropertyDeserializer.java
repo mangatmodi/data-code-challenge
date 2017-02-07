@@ -1,4 +1,4 @@
-package tasks.first;
+package tasks.first.properties;
 
 import java.lang.reflect.Type;
 

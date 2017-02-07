@@ -1,6 +1,4 @@
-package tasks.first;
-
-import tasks.first.TaxiProperty.Companies;
+package tasks.first.properties;
 
 public class TaxiProperty extends Property {
 	private int companyId;

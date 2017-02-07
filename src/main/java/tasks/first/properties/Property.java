@@ -1,6 +1,6 @@
-package tasks.first;
+package tasks.first.properties;
 
-import main.ParseRouteFile;
+import tasks.first.main.ParseRouteFile;
 
 public abstract class Property {
 	public static <T> Property create(String propertyString, Class<T> c) {

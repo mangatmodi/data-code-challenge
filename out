@@ -1,47 +1,47 @@
-RouteRow1270EURvbbPUBLIC_TRANSPORT
+RouteRow1270EURpublic_transportvbb
 SegmentRow00uvr_I{yxpABuAFcAp@yHvAwNr@iGPwAh@a@jAg@#b1becchttps://d3m2tfu2xpiope.cloudfront.net/vehicles/walking.svgwalking
-StopRow013.40335652.5302272015-04-17T13:30:00+02:00
+StopRow013.40335652.5302272015-04-17 13:30:00+02:00
 SegmentStopRow011
-StopRow1U Rosa-Luxemburg-Platz13.41040452.5281872015-04-17T13:38:00+02:00
+StopRow1U Rosa-Luxemburg-Platz13.41040452.5281872015-04-17 13:38:00+02:00
 SegmentStopRow022
 RouteSegmentRow111
 SegmentRow18elr_I_fzpAfe@_Sf]dFr_@~UjCbg@yKvj@lFfb@`C|c@hNjc@#d64820S+U Potsdamer PlatzU2https://d3m2tfu2xpiope.cloudfront.net/vehicles/subway.svgsubway
 SegmentStopRow121
-StopRow2S+U Alexanderplatz13.41359552.5220742015-04-17T13:40:00+02:00
+StopRow2S+U Alexanderplatz13.41359552.5220742015-04-17 13:40:00+02:00
 SegmentStopRow132
-StopRow3U Klosterstr.13.41245452.5172292015-04-17T13:42:00+02:00
+StopRow3U Klosterstr.13.41245452.5172292015-04-17 13:42:00+02:00
 SegmentStopRow143
-StopRow4U Märkisches Museum13.40876852.5120062015-04-17T13:43:00+02:00
+StopRow4U Märkisches Museum13.40876852.5120062015-04-17 13:43:00+02:00
 SegmentStopRow154
-StopRow5U Spittelmarkt13.4023552.5113052015-04-17T13:45:00+02:00
+StopRow5U Spittelmarkt13.4023552.5113052015-04-17 13:45:00+02:00
 SegmentStopRow165
-StopRow6U Hausvogteiplatz13.39534752.5133632015-04-17T13:47:00+02:00
+StopRow6U Hausvogteiplatz13.39534752.5133632015-04-17 13:47:00+02:00
 SegmentStopRow176
-StopRow7U Stadtmitte U213.38971152.5121682015-04-17T13:49:00+02:00
+StopRow7U Stadtmitte U213.38971152.5121682015-04-17 13:49:00+02:00
 SegmentStopRow187
-StopRow8U Mohrenstr.13.38379652.5115212015-04-17T13:50:00+02:00
+StopRow8U Mohrenstr.13.38379652.5115212015-04-17 13:50:00+02:00
 SegmentStopRow198
-StopRow9S+U Potsdamer Platz13.3779852.5090672015-04-17T13:51:00+02:00
+StopRow9S+U Potsdamer Platz13.3779852.5090672015-04-17 13:51:00+02:00
 SegmentStopRow1109
 RouteSegmentRow122
-RouteRow2270EURvbbPUBLIC_TRANSPORT
+RouteRow2270EURpublic_transportvbb
 SegmentRow20uvr_I{yxpABrCLnF#b1becchttps://d3m2tfu2xpiope.cloudfront.net/vehicles/walking.svgwalking
-StopRow1013.40335652.5302272015-04-17T13:32:00+02:00
+StopRow1013.40335652.5302272015-04-17 13:32:00+02:00
 SegmentStopRow2111
-StopRow11U Rosenthaler Platz13.40139752.5297782015-04-17T13:35:00+02:00
+StopRow11U Rosenthaler Platz13.40139752.5297782015-04-17 13:35:00+02:00
 SegmentStopRow2122
 RouteSegmentRow231
 SegmentRow35cvr_IwmxpAdG|k@hFri@wEtn@kAtPdQ~p@#b20077U Leopoldplatz142https://d3m2tfu2xpiope.cloudfront.net/vehicles/bus.svgbus
 SegmentStopRow3121
-StopRow12Tucholskystr.13.39420552.5284742015-04-17T13:37:00+02:00
+StopRow12Tucholskystr.13.39420552.5284742015-04-17 13:37:00+02:00
 SegmentStopRow3132
-StopRow13Torstr./U Oranienburger Tor13.38739252.5272972015-04-17T13:38:00+02:00
+StopRow13Torstr./U Oranienburger Tor13.38739252.5272972015-04-17 13:38:00+02:00
 SegmentStopRow3143
-StopRow14Robert-Koch-Platz13.3797652.5283752015-04-17T13:41:00+02:00
+StopRow14Robert-Koch-Platz13.3797652.5283752015-04-17 13:41:00+02:00
 SegmentStopRow3154
-StopRow15Invalidenpark13.37692852.5287622015-04-17T13:43:00+02:00
+StopRow15Invalidenpark13.37692852.5287622015-04-17 13:43:00+02:00
 SegmentStopRow3165
-StopRow16S+U Berlin Hauptbahnhof13.36892852.5258492015-04-17T13:45:00+02:00
+StopRow16S+U Berlin Hauptbahnhof13.36892852.5258492015-04-17 13:45:00+02:00
 SegmentStopRow3176
 RouteSegmentRow242
 SegmentRow40#b1becchttps://d3m2tfu2xpiope.cloudfront.net/vehicles/change.svgchange
@@ -50,17 +50,17 @@ SegmentStopRow4172
 RouteSegmentRow253
 SegmentRow51q}q_IybrpAbaBio@#b20077Sonnenallee/Baumschulenstr.M41https://d3m2tfu2xpiope.cloudfront.net/vehicles/bus.svgbus
 SegmentStopRow5171
-StopRow17S Potsdamer Platz Bhf/Voßstr.13.37665952.5101452015-04-17T13:53:00+02:00
+StopRow17S Potsdamer Platz Bhf/Voßstr.13.37665952.5101452015-04-17 13:53:00+02:00
 SegmentStopRow5182
 RouteSegmentRow264
-RouteRow3270EURvbbPUBLIC_TRANSPORT
+RouteRow3270EURpublic_transportvbb
 RouteSegmentRow311
 RouteSegmentRow322
-RouteRow4578EURdrivenowCAR_SHARING
+RouteRow4578EURcar_sharingdrivenow
 SegmentRow60uvr_I{yxpA?d@?X@V@z@FdD@`@@T@P??FIHILI~@e@`Ak@??AaC#b1becchttps://d3m2tfu2xpiope.cloudfront.net/vehicles/walking.svgwalking
-StopRow18Torstraße 103, 10119 Berlin, Deutschland13.403365952.53023562015-04-17T12:29:00+01:00
+StopRow18Torstraße 103, 10119 Berlin, Deutschland13.403365952.53023562015-04-17 12:29:00+01:00
 SegmentStopRow6191
-StopRow19Linienstraße 204-206, 10119 Berlin, Deutschland13.40261252.5289892015-04-17T12:33:00+01:00
+StopRow19Linienstraße 204-206, 10119 Berlin, Deutschland13.40261252.5289892015-04-17 12:33:00+01:00
 SegmentStopRow6202
 RouteSegmentRow471
 SegmentRow70#0096b2https://d3m2tfu2xpiope.cloudfront.net/vehicles/setup.svgsetup
@@ -69,7 +69,7 @@ SegmentStopRow7202
 RouteSegmentRow482
 SegmentRow80cqr_IiuxpAAeB?G?GTiEXkE??cCk@??B]rAiNN{AV}BHq@D[Ho@Fg@Fa@Hk@VqCDe@Fa@Jk@Hc@vBqLDSDOHUNc@L]LYNYLWLWZq@??@AHWLY\y@P_@La@Tm@Ro@d@_BPi@Ro@Tw@XqARq@V{@t@eC??LNvBvB??JBb@b@DDlAlAb@d@VVV\fBxBl@t@rCnCtDnDNPNN@Bf@p@v@jABH`@x@L\Pd@JZHVFNlAjDrAdDb@~@FPBT??j@hAXh@`@j@b@n@X`@TXTZfBxB\b@RTb@h@\`@\^\^h@j@\^Z\\^^d@JNLNzAhB`@f@Z`@Z\Z^p@z@z@nA\d@Zh@p@fAdBpCz@vAf@x@f@x@PXT^P\JVLXFLDNDJDLJf@H`@FX@LBNBND^BTBPBR@ZBx@@H@L@LDf@?NF~BHjCBpAFhBD`CN`GRzGBv@B|@Bl@Bv@@d@BZ@TBLBPBDDP@D@F@JDp@@\DHPjGBdA@V@j@VhKBn@Bp@H`EFhCPjGZnL\xM@^??VE^EDAD@FDv@hA@FBnA@d@D~AABGP#0096b2https://d3m2tfu2xpiope.cloudfront.net/vehicles/driving.svgdriving
 SegmentStopRow8201
-StopRow20Leipziger Platz 7, 10117 Berlin, Deutschland13.37797752.5090712015-04-17T12:48:00+01:00
+StopRow20Leipziger Platz 7, 10117 Berlin, Deutschland13.37797752.5090712015-04-17 12:48:00+01:00
 SegmentStopRow8212
 RouteSegmentRow493
 SegmentRow90#0096b2https://d3m2tfu2xpiope.cloudfront.net/vehicles/parking.svgparking
@@ -77,10 +77,10 @@ SegmentStopRow9211
 SegmentStopRow9212
 RouteSegmentRow4104
 CarSharingProperty4M-DX9224BMW X1Linienstraße 72, 10119 BerlinJorge72DieselGood
-RouteRow5551EURcar2goCAR_SHARING
+RouteRow5551EURcar_sharingcar2go
 SegmentRow100uvr_I{yxpA?g@Bm@@_@Dc@h@eG??gDqAO???CX}BlK#b1becchttps://d3m2tfu2xpiope.cloudfront.net/vehicles/walking.svgwalking
 SegmentStopRow10191
-StopRow21Zehdenicker Straße 12, 10119 Berlin, Deutschland13.4036952.531152015-04-17T12:35:00+01:00
+StopRow21Zehdenicker Straße 12, 10119 Berlin, Deutschland13.4036952.531152015-04-17 12:35:00+01:00
 SegmentStopRow10222
 RouteSegmentRow5111
 SegmentRow110#00a4f1https://d3m2tfu2xpiope.cloudfront.net/vehicles/setup.svgsetup
@@ -96,15 +96,15 @@ SegmentStopRow13211
 SegmentStopRow13212
 RouteSegmentRow5144
 CarSharingProperty5B-GO2784Smart FortwoZehdenicker Straße 16, 10119 Berlin27GasolineGood
-RouteRow6googlePRIVATE_BIKE
+RouteRow6private_bikegoogle
 SegmentRow140uvr_I{yxpA?d@?X@V@z@FdD@`@@T@P@F@L@N??\W~BgBRYtByATQRO^[r@a@j@e@VQPMNGLGDCt@WjB]LCNEJANAL?J@H@J@HDNDLFrAh@NDb@TNHlAn@\PNNNNdAhA??BKJ[FMLa@??DHTZFDBBPTDH~AhDDJxAfDH^??LKLEJGFAB?DAN@T@H?FADAFAfAUHELGTMTQBC@C@E??^YlB_Bj@k@zC_DPS??Rt@DLt@pCn@hCrA|EHXFXJj@Dj@?@Dx@?DBr@D`A?HDt@VfI@FJ|EPxH@N?V?NANALAHBxAN~JPdI@n@?H@L?H@f@RvFRjHFnCBbADzA@r@j@hS??PrF??PzFHRBF@D@F@F?HLpE@`@??JAJCDAHEFG?ALQJUJg@HQJMJKHAFAJ?X?bCRH@R?R@`@DlAN~Cb@H@H?tABTAn@?`@HbGv@XDtAPH@H@??J@F@LAv@AL?^G??AOCWAM?IAUAe@AQCY??r@GBABCf@mA#b1beccCyclinghttps://d3m2tfu2xpiope.cloudfront.net/vehicles/cycling.svgcycling
 SegmentStopRow14191
 SegmentStopRow14212
 RouteSegmentRow6151
-RouteRow7100EURnextbikeBIKE_SHARING
+RouteRow7100EURbike_sharingnextbike
 SegmentRow150uvr_I{yxpA?d@?X@V@z@FdD@`@@T@P??OGIEEC#b1becchttps://d3m2tfu2xpiope.cloudfront.net/vehicles/walking.svgwalking
 SegmentStopRow15191
-StopRow22Rosenthaler Platz13.4013408422470152.529978348555362015-04-17T12:31:00+01:00
+StopRow22Rosenthaler Platz13.4013408422470152.529978348555362015-04-17 12:31:00+01:00
 SegmentStopRow15232
 RouteSegmentRow7161
 SegmentRow160#0a4abdhttps://d3m2tfu2xpiope.cloudfront.net/vehicles/setup.svgsetup
@@ -113,7 +113,7 @@ SegmentStopRow16232
 RouteSegmentRow7172
 SegmentRow170_wr_IqlxpABCDIFIHM??@F@L@N??\W~BgBRYtByATQRO^[r@a@j@e@VQPMNGLGDCt@WjB]LCNEJANAL?J@H@J@HDNDLFrAh@NDb@TNHlAn@\PNNNNdAhA??BKJ[FMLa@??DHTZFDBBPTDH~AhDDJxAfDH^??LKLEJGFAB?DAN@T@H?FADAFAfAUHELGTMTQBC@C@E??^YlB_Bj@k@zC_DPS??Rt@DLt@pCn@hCrA|EHXFXJj@Dj@?@Dx@?DBr@D`A?HDt@VfI@FJ|EPxH@N?V?NANALAHBxAN~JPdI@n@?H@L?H@f@RvFRjHFnCBbADzA@r@j@hS??PrF??PzFHRBF@D@F@F?HLpE@`@??JAJCDAHEFG?ALQJUJg@HQJMJKHAFAJ?X?bCRH@R?R@`@DlAN~Cb@H@H?tABTAn@?`@HbGv@XDtAPH@H@??H~BBr@Bt@@N?B??p@_@n@[???QAQAk@#0a4abdhttps://d3m2tfu2xpiope.cloudfront.net/vehicles/bike_sharing.svgcycling
 SegmentStopRow17231
-StopRow23Bahnhof/ Potsdamer Platz13.375967144966152.50970128207972015-04-17T12:49:00+01:00
+StopRow23Bahnhof/ Potsdamer Platz13.375967144966152.50970128207972015-04-17 12:49:00+01:00
 SegmentStopRow17242
 RouteSegmentRow7183
 SegmentRow180#0a4abdhttps://d3m2tfu2xpiope.cloudfront.net/vehicles/parking.svgparking
@@ -125,10 +125,10 @@ SegmentStopRow19241
 SegmentStopRow19212
 RouteSegmentRow7205
 BikeSharingProperty751824
-RouteRow8120EURcallabikeBIKE_SHARING
+RouteRow8120EURbike_sharingcallabike
 SegmentRow200uvr_I{yxpA?d@?X??NANA@t@J|D@X@Z@T@T@^@b@?@#b1becchttps://d3m2tfu2xpiope.cloudfront.net/vehicles/walking.svgwalking
 SegmentStopRow20191
-StopRow24U-Bhf. Rosenthaler Platz / Torstraße13.40098652.5295642015-04-17T12:32:00+01:00
+StopRow24U-Bhf. Rosenthaler Platz / Torstraße13.40098652.5295642015-04-17 12:32:00+01:00
 SegmentStopRow20252
 RouteSegmentRow8211
 SegmentRow210#f20014https://d3m2tfu2xpiope.cloudfront.net/vehicles/setup.svgsetup
@@ -137,7 +137,7 @@ SegmentStopRow21252
 RouteSegmentRow8222
 SegmentRow220{tr_IckxpA?AAc@A_@??~BgBRYtByATQRO^[r@a@j@e@VQPMNGLGDCt@WjB]LCNEJANAL?J@H@J@HDNDLFrAh@NDb@TNHlAn@\PNNNNdAhA??BKJ[FMLa@??DHTZFDBBPTDH~AhDDJxAfDH^??LKLEJGFAB?DAN@T@H?FADAFAfAUHELGTMTQBC@C@E??^YlB_Bj@k@zC_DPS??Rt@DLt@pCn@hCrA|EHXFXJj@Dj@?@Dx@?DBr@D`A?HDt@VfI@FJ|EPxH@N?V?NANALAHBxAN~JPdI@n@?H@L?H@f@RvFRjHFnCBbADzA@r@j@hS??PrF??PzFHRBF@D@F@F?HLpE@`@??JAJCDAHEFG?ALQJUJg@HQJMJKHAFAJ?X?bCRH@R?R@`@DlAN~Cb@H@H?tABTAn@?`@HbGv@XDtAPH@H@??J@F@LAv@AL???@k@Ak@Cg@?W?I?I??m@FE?AACACCKMOWMOGKCEACAC?EAQAk@AQ?c@?KAk@AQ?G?G@E@GHQXo@DMBEBCBCB?BAJ?LA#f20014https://d3m2tfu2xpiope.cloudfront.net/vehicles/bike_sharing.svgcycling
 SegmentStopRow22251
-StopRow25U-Bhf. Potsdamer Platz / Leipziger Platz13.3793413652.50979272015-04-17T12:49:00+01:00
+StopRow25U-Bhf. Potsdamer Platz / Leipziger Platz13.3793413652.50979272015-04-17 12:49:00+01:00
 SegmentStopRow22262
 RouteSegmentRow8233
 SegmentRow230#f20014https://d3m2tfu2xpiope.cloudfront.net/vehicles/parking.svgparking
@@ -149,7 +149,7 @@ SegmentStopRow24261
 SegmentStopRow24212
 RouteSegmentRow8255
 BikeSharingProperty8114111
-RouteRow9965EURgoogleTAXI
+RouteRow9965EURtaxigoogle
 SegmentRow250uvr_I{yxpA?d@?X@V@z@FdD@`@@T@P@F@L@NDRFXBXDfBBVDVZ~L@Z?ZD^nAnIzA|J\nBDXNnAD`@BXDj@NpAPpAl@~Eb@hDJv@^rCJt@TlB@VFj@??D\@PJIDAHCfBOPAPC|@I`CSp@GN?^GRC~@KpBWx@ILARA|DUjBQZKFE@AJEpCWvAMB@DBL?@?PAD?DA`@EZCB?H?H@H?B?NAt@I`Cc@RO~AQLAtCSJDbIy@lDWnDWZSrCUhD[LAtCYRJPAxBUb@E??@j@VhKBn@Bp@H`EFhCPjGZnL\xM@^??VE^EDAD@FDv@hA@FBnA@d@D~AABGP#fec536Taxihttps://d3m2tfu2xpiope.cloudfront.net/vehicles/taxi.svgdriving
 SegmentStopRow25191
 SegmentStopRow25212

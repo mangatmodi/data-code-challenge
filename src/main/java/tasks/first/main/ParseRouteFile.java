@@ -1,4 +1,4 @@
-package main;
+package tasks.first.main;
 
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
@@ -7,12 +7,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.io.Reader;
-
-import tasks.first.PropertyDeserializer;
-import tasks.first.Provider;
-import tasks.first.ProviderDesiralizer;
-import tasks.first.Route;
-
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -20,11 +14,14 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.stream.JsonReader;
 
+import tasks.first.*;
+import tasks.first.properties.*;
+
 public class ParseRouteFile {
 	public static Logger logger = Logger.getLogger(ParseRouteFile.class.getSimpleName());
 	public static Gson gson = new GsonBuilder().setPrettyPrinting()
-			.registerTypeAdapter(tasks.first.Route.PropertyWrapper.class, new PropertyDeserializer())
-			.registerTypeAdapter(tasks.first.Provider.class, new ProviderDesiralizer()).create();
+			.registerTypeAdapter(Route.PropertyWrapper.class, new PropertyDeserializer())
+			.registerTypeAdapter(Provider.class, new ProviderDesiralizer()).create();
 
 	public static void main(String[] args) {
 		try {
