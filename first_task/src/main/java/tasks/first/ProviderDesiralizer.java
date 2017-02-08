@@ -10,7 +10,9 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 
 public class ProviderDesiralizer implements JsonDeserializer<Provider[]> {
-
+    /** Custom deserializer as Provider name is the key encapsulating the attributes.
+     * Gson would create classes for each such provider otherwise
+     */
 	@Override
 	public Provider[] deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context)
 			throws JsonParseException {

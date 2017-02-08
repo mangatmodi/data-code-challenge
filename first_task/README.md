@@ -5,9 +5,11 @@ We will discuss the assumptions made for the data, project setup, data modeling 
 ## 1. Data Analysis
 
 We are given data in three files, each one is analysed as below:-
+
 ### routes.json
 
 This is a big fat json file contaning an array of routes and data providers. Following are the assumptions made about the data in this file.
+
 1. Each route here is and actual route in the geography as shared by the corresponding data providers.
 2. A **Route** is divided into multiple segments. This would be an ordered set (json array).
 3. A **Segment** is ordered collection of stops. Segment could have a unique identifier - Polyline. A Polyline in geometry means a continues line which is formed by several line segments.
@@ -16,7 +18,7 @@ This is a big fat json file contaning an array of routes and data providers. Fol
 6. **Stop** is a json object specifying the geo location and the timestamp of the presence for travelers in a segment for a route. The stop can be uniquely identified as gps coordinates. timestamp here refers that a user traveling under a given route will present at the given stop at this timestamp.
 7. Routes have various properties, which I assume to be dependent on route type. For e.g. bike_sharing route will tell the numbers of bikes available on the route.
 8. The Route.property has no definite structure and needs to be handled separately whenever a new route type is introduced.
-9. Similarly stop has also a property field. However the dataset contains only null property for all the stops. So no further inference can be made about this field
+9. Similarly stop has also a property field. However the dataset contains only null property for all the stops. So no further inference can be made about this field.
 10. Presence of timestamp field in the stop hints that the routes are valid only for the given timestamp. So the new route file has to be processed at least everyday, as the given all routes will be no longer valid for the next day. Assuming that all the timestamps are for the current date. So daily update frequency have been taken for this test.
 
 ### route_queries.csv
@@ -84,6 +86,7 @@ However to successfully run we will need additional files which are shared on al
 
 ## 3. Future Improvements
 This project is submitted as part of the test. There is a huge scope of improvement in both system and database design. I have highlighted few of them below.
+
 1. We need to setup a proper pipeline to get data from source to Redshift.
 2. Routes data does not seem to need highly frequent update. We could setup a cronjob for the same. **Jenkins** is one such good cron manager.
 3. Current user query processing is quite primitive. User Query data could have much higher scale. Recommended option is to parse data at receiving end and stream it to **Kinesis Firehose**. AWS have Redshift delivery Firehose, which will copy data at regular intervals(user controlled rate), while using S3 as intermediate storage.

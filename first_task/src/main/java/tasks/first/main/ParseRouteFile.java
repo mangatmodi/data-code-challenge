@@ -17,6 +17,9 @@ import com.google.gson.stream.JsonReader;
 import tasks.first.*;
 import tasks.first.properties.*;
 
+/*Parse the Route data provided in the file given as first argument 
+ * and generate the output data in the location provided in the second argument
+ * */
 public class ParseRouteFile {
 	public static Logger logger = Logger.getLogger(ParseRouteFile.class.getSimpleName());
 	public static Gson gson = new GsonBuilder().setPrettyPrinting()
@@ -37,12 +40,12 @@ public class ParseRouteFile {
 			logger.log(Level.SEVERE, "Unable to read Json routes file:" + args[0], false);
 			System.exit(-1);
 		}
+		// Change the reader here if from different source
 		JsonReader reader = new JsonReader(in);
 		try {
 			reader.beginObject();
 			while (reader.hasNext()) {
 				String key = reader.nextName();
-
 				if (key.equals("routes")) {
 					reader.beginArray();
 					while (reader.hasNext()) {
@@ -66,7 +69,7 @@ public class ParseRouteFile {
 		} catch (IOException e) {
 			e.printStackTrace();
 			logger.log(Level.SEVERE, "Malformed Json routes file:" + args[0], false);
-			System.exit(-1);
+			System.exit(-2);
 		}
 
 	}

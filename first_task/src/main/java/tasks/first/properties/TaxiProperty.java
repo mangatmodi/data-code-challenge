@@ -1,5 +1,8 @@
 package tasks.first.properties;
-
+/** Taxi Property is different than other properties in way that
+ *  Other than defining the route properties it also contains 
+ *  the Taxi entity. i.e. info about Taxi companies plying in the route.
+ * */
 public class TaxiProperty extends Property {
 	private int companyId;
 	private Companies[] companies;

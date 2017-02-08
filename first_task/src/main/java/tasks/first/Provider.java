@@ -1,6 +1,8 @@
 package tasks.first;
 
 public class Provider {
+	/* Data for data provider
+	 * */
 	private static int prevProvider = 0;
 	private String type;
 	private ProviderAttribute attributes;

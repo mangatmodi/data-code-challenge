@@ -12,8 +12,6 @@ public class Route {
 	static int segmentId = 0;
 	static int stopId = 0;
 
-	boolean isPropertyOfRoute;
-
 	public static Map<String, Integer> segmentToId = new HashMap<>();
 	static Map<String, Integer> stopToId = new HashMap<>();
 
@@ -62,18 +60,17 @@ public class Route {
 	}
 
 	public void setProperties() {
+		/*
+		 * */
 		switch (this.typeEnum) {
 		case CAR_SHARING:
 			this.propertyObject = Property.create(properties.toString(), CarSharingProperty.class);
-			isPropertyOfRoute = true;
 			break;
 		case BIKE_SHARING:
 			this.propertyObject = Property.create(properties.toString(), BikeSharingProperty.class);
-			isPropertyOfRoute = true;
 			break;
 		case TAXI:
 			this.propertyObject = Property.create(properties.toString(), TaxiProperty.class);
-			isPropertyOfRoute = false;
 			break;
 		default:
 			this.propertyObject = null;

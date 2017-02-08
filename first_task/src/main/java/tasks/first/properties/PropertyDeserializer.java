@@ -8,7 +8,8 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonParseException;
 
 import tasks.first.Route.PropertyWrapper;
-
+/** extract the Json string for the Route.Property instead of Gson trying to convert it into an object 
+ * */
 public class PropertyDeserializer implements JsonDeserializer<PropertyWrapper> {
 	@Override
 	public PropertyWrapper deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context)
