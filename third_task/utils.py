@@ -4,6 +4,7 @@ from shapely.geometry import Point
 def toGeoJsonFeature(shape):
   ret = {}	
   ret['type'] = 'Feature'
+  ret['properties'] = {}   
   feature = {}
   if shape.length>0 and shape.area==0:
     feature['type'] = 'LineString'
@@ -16,7 +17,7 @@ def toGeoJsonFeature(shape):
 
 
 def isStopCandidate(feature):
-   return (((feature['properties']['previous_dominating_activity'] == "still" or feature['properties']['previous_dominating_activity'] == "on_foot")
+   return (((feature['properties']['previous_dominating_activity'] == "still" )
    and (feature['properties']['previous_dominating_activity_confidence']>50))
-   or((feature['properties']['current_dominating_activity'] == "still" or feature['properties']['current_dominating_activity'] == "on_foot")
+   or((feature['properties']['current_dominating_activity'] == "still")
     and (feature['properties']['current_dominating_activity_confidence']>50)))
