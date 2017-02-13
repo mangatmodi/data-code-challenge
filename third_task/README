@@ -1,0 +1,87 @@
+README
+========
+
+1. Data Description
+====================
+The data is given in two geoJson format files. The longitude,latitude coodinates are given in CRS:84 which is equivalent to EPSG:4326 but reversign lat-long to long-lat in the point defination. The coordinates are from Dar es Salaam city of Tanzania. Following the description of each file.
+
+ 1.1 routes.geojson: It contains routes over the city, each specified as a LineString. A linestring is continues, ordered collection of Line Segment. A Line segment is ordered collection of two Points (long,lat) specifying the endpoints of the line segment.
+
+ 1.2 activity_points.geojson: It contains points on the city. Each point other than lat-long coordinate contains various properties. Following are the definition of the important ones. Some of them are assumptions.
+
+   a. accuracy: The user is located within a circle of accuracy as radius and coordinates as the center.
+   b. previous_dominating_activity: user activity we were most confident about in the last iteration under the circle drawn in the above definition.
+   c. current_dominating_activity: user activity we are most confident currently.
+   d. previous_dominating_activity_confidence: confidence in the previous activity.
+   e. current_dominating_activity_confidence: confidence in the current activity.
+   f. feature: The type of GPS system: Active or Passive.
+   g. route: If user is following a known route.
+   j. altitude: Altitude in meters from sea level for the given location.
+   k. bearing: Angle between the magnetic north and the direction of movement.
+   l. speed: current speed of the movement
+
+2. Algorithm to find Bus Stops
+==============================
+This is an open ended problem with approximate solutions. The algorithm apply series of rules to rule out the points from the candidate sets.
+
+  a. Enter all the points in the candidate set for bus stops.
+  b. Remove points which are not have any still activity either in previous or current iteration with more than 50% confidence.
+  c. Remove the points which are not 20 meter closer to any route or the accuracy is less than the minimum distance of the point to the closest route as we expect bus 
+  d. Project the remaining points in their respective closest routes to get a new candidate set. 
+  e. Cluster the points lying within 100m range as we can not possibily have bus stops closer than that and mark one of them as the bus stop.
+
+  2.1 Distance between two points
+
+  Distance between two points on earth given the longitude and latitude(also called the great circle distance) is calculated using haversine formula as below:-
+
+      a = sin²(ΔlatDifference/2) + cos(lat1).cos(lt2).sin²(ΔlonDifference/2)
+      c = 2.atan2(√a, √(1−a))
+      d = c x 6371km 
+
+  Haversine formula is for spherical is distance where as Earth is an ellipsoid. vincentys formula provides approximation to about 0.1mm accurate. However for simplcity of calculations, I have decided to transformed cooridnates to EPSG:21037, which is Projection of Tanzania on Transverse Mercator. This projected coordinate system is used to create Shapely Points and Linestrings. 
+
+  Shapely calculates distance between two points as euclidean distance. Now this distance will largly difference than if same was calculated with Haversine. However in shorter distances the error is within permissible limits. This is tested as follows:-
+
+    a. Find distance between all pair points using both Haversine(EPSG:4326) and Euclidean(EPSG:21037) in meters.
+    b. calculate the mean square error between the two type of distances taking only the points whose accuracy circle intersect each other. This error came out to be 0.01 sq. m. We would expect same error when calculating distance from linestring in step(c) of above algorithm.
+    c. calculate the mean square error between the two type of distances taking only the points which are less than 100 meters of each other. This error came out to be 0.02 sq. m. This is the error we expect in calculating cluster membership.
+
+  So the error in caclucating the euclidean distance between projected points are within practical limits for such an approximation problem. However such approximation can not be used for highly location sensitive services like aviation, military etc.
+
+  2.3 Clustering Algorithm
+  
+  K-means is a very popular clusteing algorithm, which however is not suited in this problem. Because k-means finds exactly k clusters while reducing the variance whereas we do not have any limit on the number of clusters. We want to group points which are geodeticaly closer. So I came up with following clustering algorithm:-
+
+    a. For each point in candidate set get the closest point we might have earlier seen. This step could take O(N) time, for N points. To optimise rtree spatial index is used. rtree can return nearest neighbour in O(log(N)).
+    b. If the nearest neighbor lies with 100m of the current point then the current point is part of the existing cluster, else it will start a new cluster.
+    c. if this point is the spwaning a new cluster, mark it as the bus stop.
+    d. index the point in rtree in both the cases.
+
+3. Project Structure
+====================
+ a. main.py executes the main program.
+ b. setup.py gives the easy installar of the poject with dependency
+ c. utils.py contains utility functions.
+ d. hypothesis.py contains functions to test the assumptions.
+ e. web_map/stops.geojson contains the derived bus locations.
+ f. web_map/render.py renders the geojson file using folium library.
+ g. web_map/map.Allpoints.html: Web map of all the points.
+ h. web_map/mapCloserToRoute.html: Web map of all the points closer to the route.
+ i. web_map/map.clustered.html: Web map of above points being clustered
+ j. web_map/mapStillandFoot.html: clustered map taking still and foot activity as indicator of bus stop
+ k. web_map/mapHighAccuracy.html: clustered map by taking points with accuracy less than or equal to 5m
+ l. web_map/map.html: Final map, by taking the above assumptions.
+
+ 4. Future Improvements
+ =======================
+ Problem being an open ended has a huge scope of improvements. Following are the steps which can be taken to the solution further improved:-
+
+  a. Algorithm to find points closer to route takes O(N^2). We could actually devide all routes into several small boundry boxes and index them in an rtree. That would improve run time to (NlogN).
+  b. Clustering algorithm is quite primitive. We have taken a magic number - 100m as our assumption. We could actually minimize the distacnce between cluster to get better clustering.
+  c. We took first point in the cluster. It should be the median point.
+  d. Haversine should be used as distance calculator, instead of projecting EPSG:4326 to EPSG:21037 and taking euclidean distance.
+  e. We simply took still points in the map as candidate set. Several other algoritm could be tried.
+  f. Real answer could be crossvalidated with already marked data to get the best working algorithm. 
+
+
+
