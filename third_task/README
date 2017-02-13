@@ -72,8 +72,18 @@ This is an open ended problem with approximate solutions. The algorithm apply se
  k. web_map/mapHighAccuracy.html: clustered map by taking points with accuracy less than or equal to 5m
  l. web_map/map.html: Final map, by taking the above assumptions.
 
- 4. Future Improvements
- =======================
+4. Execution Instructions
+==========================
+ a. The code has multiple depencies. Install them by giving following command in root folder of the code challenge:
+            'python third_task/setup.py install'
+ b. Alternatively, install with pip as
+           'pip install folium shapely pyproj rtree'
+ c. Now the project can be executed by following command
+     'python third_task/main.py routes.geojson activity_points.geojson third_task/web_map/stops.geojson'
+ d. view the result by opening 'third_task/web_map/map.html' in a web browser
+
+5. Future Improvements
+=======================
  Problem being an open ended has a huge scope of improvements. Following are the steps which can be taken to the solution further improved:-
 
   a. Algorithm to find points closer to route takes O(N^2). We could actually devide all routes into several small boundry boxes and index them in an rtree. That would improve run time to (NlogN).
@@ -82,6 +92,4 @@ This is an open ended problem with approximate solutions. The algorithm apply se
   d. Haversine should be used as distance calculator, instead of projecting EPSG:4326 to EPSG:21037 and taking euclidean distance.
   e. We simply took still points in the map as candidate set. Several other algoritm could be tried.
   f. Real answer could be crossvalidated with already marked data to get the best working algorithm. 
-
-
 
